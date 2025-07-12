@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+
+padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* When you animate background-position, the animation only works if:
+✅ 1. background-size is larger than the element */
+
+body{
+    font-family:'Poppins' , sans-serif ;
+
+   
+}
+
+
+
+.container{
+    background:linear-gradient(to bottom right  ,rgba(84, 26, 114, 1) ,rgba(32, 59, 140, 1) ,red );
+    min-height: 100vh;
+    width: 100%;
+    animation: moveBg 15s ease-in 0s infinite alternate;
+    background-size: 200% 200%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.todo{
+    margin: 70px 0px 30px;
+    padding: 30px 30px 70px;
+    width: 600px;
+    background-color: white;
+    border-radius: 10px;
+    height: auto;
+}
+
+.todo div:first-child{
+   
+    display: flex;
+    align-items: center;
+
+    img{
+        width: 60px;
+        margin-left: 10px;
+    }
+}
+
+.todo div:nth-of-type(2){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#edeef0;
+    border-radius: 25px;
+    margin-top: 20px;
+
+
+    input{  
+            flex: 1;
+            outline: none;
+            border: none;
+            background-color: transparent;
+            padding: 20px;
+            font-size: 18px;
+            outline: none;
+
+            &::placeholder {
+                font-size: 18px;
+
+            }
+    }
+
+    button{
+        outline: none;
+        border: none;
+        color: #fff;
+        background-color: #ff5945;
+        padding: 20px 50px;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 40px;
+    }
+    
+
+}
+
+.todos-list{
+    margin-top: 20px;
+}
+
+
+
+.list-container li{
+    width: 100%;
+    list-style: none;
+    font-size: 18px;
+    padding: 18px 70px 18px 43px;
+    position: relative;
+    cursor: pointer;
+     word-wrap: break-word; 
+    white-space: normal;
+    margin: 10px 0px;
+ 
+
+
+}
+
+.list-container li::before{
+    content: '';
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    position: absolute;
+    border-radius: 50%;
+    background-image: url(./images/unchecked.png); 
+    background-size:contain;
+    background-position: center;
+    left: 0;
+    
+}
+
+li.checked{
+    color: #555;
+    text-decoration: line-through;
+  
+}
+
+.list-container li.checked::before{
+    background-image: url(./images/checked.png); 
+    background-size:contain;
+    background-position: center;
+   
+}
+
+.list-container li  span{
+    font-size: 22px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    color: black;
+    position: absolute;
+    right: -8px;
+
+}
+
+.list-container li  .span2{
+    font-size: 22px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    color: black;
+    position: absolute;
+    right: 30px;
+
+}
+
+
+
+.text{
+    color: red;
+       margin: 25px 0px 5px 0px;
+}
+
+.hide{
+    display: none;
+}
+
+.text2{
+    color: red;
+    margin-top: 30px;
+}
+
+p{
+    margin-top: 10px;
+}
+
+
+@keyframes moveBg {
+  	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 30%;
+	}
+}
+
+
+@media (max-width:600px){
+    .todo{
+         padding: 30px 15px 50px;
+         width: 100%;
+    }
+ .list-container li {
+    font-size: 15px;
+    padding-right: 70px;
+       
+ }
+
+ .todo div:nth-of-type(2){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#edeef0;
+    border-radius: 25px;
+    margin-top: 20px;
+    height: 55px;
+
+
+    input{  
+            font-size: 16px;
+    }
+
+    button{
+        outline: none;
+        border: none;
+        color: #fff;
+        background-color: #ff5945;
+        padding: 15px 35px;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 40px;
+    }
+}
+}
+
+
+@media  (max-width:400px) {
+     .todo div:nth-of-type(2){
+    height: 42px;
+        button{
+            padding: 10px 25px;
+        }
+     }
+}
+/* 
+important thing noticed in this flex 
+
+jab ham kese container ko display: flex; dete ha to os container ke andr jo flex items hute hay wo os container ke barabar height le le thy
+agr onki khud ki height defined na hu q ke by defualt flex items ko align-items: stretch; laga howa hute hay jo corss axses per pori 
+height le le ty hay */

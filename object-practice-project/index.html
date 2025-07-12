@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <main>
+      <button
+        type="button"
+        class="btn btn-outline-primary btn-lg button1 button-with-same-class"
+        data-mode="get"
+      >
+        Get Employee
+      </button>
+      <button
+        type="button"
+        class="btn btn-outline-secondary btn-lg button2 button-with-same-class"
+        data-mode="Add"
+      >
+        Add Employee
+      </button>
+      <button
+        type="button"
+        class="btn btn-outline-success btn-lg button3 button-with-same-class"
+        data-mode="delete"
+      >
+        Delete Employee
+      </button>
+      <button
+        type="button"
+        class="btn btn-outline-danger btn-lg button4 button-with-same-class"
+        data-mode="total"
+      >
+        Total Employee
+      </button>
+    </main>
+
+    <!-- for getting , deleting and getting total employee -->
+    <div class="input-box hide">
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Employee Id"
+          aria-label="Employee Id"
+          aria-describedby="button-addon2"
+        />
+     
+          <button class="btn btn-outline-secondary button5"   id="button-addon2" type="button">Delete</button>
+
+      </div>
+    </div>
+
+
+    <div class="show-employe hide">
+      <div>
+        <div class="employee-details">
+          <h2>Employee Id :</h2>
+          <h3>1</h3>
+        </div>
+
+        <div class="employee-details">
+          <h2>Employee Name :</h2>
+          <h3>Azan</h3>
+        </div>
+
+
+        <div class="employee-details">
+          <h2>Employee Company :</h2>
+          <h3>XYZ</h3>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Add employee -->
+
+       <div class="input-box2 hide">
+        <div>       
+
+      <div class="input-group mb-3">
+       <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
+        <input
+          type="text"
+          class="form-control Employee-Name"
+          placeholder="Employee Name"
+          aria-label="Employee Name"
+          aria-describedby="button-addon2"
+          required
+        />
+       </div>
+
+          <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Id</span>
+         <input
+          type="text"
+          class="form-control Employee-Id"
+          placeholder="Employee Id"
+          aria-label="Employee Id"
+          aria-describedby="button-addon2"
+                 required
+        />
+        </div>
+
+       <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Company</span>
+         <input
+          type="text"
+          class="form-control Employee-Company"
+          placeholder="Employee Company"
+          aria-label="Employee Company"
+          aria-describedby="button-addon2"
+        />
+        </div>
+         <button type="button" class="btn btn-dark add button6">Add Employee</button>
+        </div>
+      </div>
+
+
+
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>
