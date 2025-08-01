@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+
+    <div class="container">
+        <h1>The Bidding Game</h1>
+        <div class="coins">
+        <p class="totalAmount hide">Total Amount = 1000</p>
+        <button class="btn btn2 hide">Add</button>
+        <div class="userAmountBox">
+        <label for="amount"> Amount :
+            <input class="amount" type="number" placeholder="Enter the ammount">
+        </label>
+        </div>
+        <p class="hide message">Please enter the bet ammount first</p>
+        </div>
+
+        <div class="dice">
+            
+            <!-- ! dice one -->
+            <div class="face" id="face1">
+                <div class="dot"></div>
+            </div>
+
+               <!-- ! dice tow -->
+             <div class="face" id="face2">
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+
+
+               <!-- ! dice three -->
+            <div class="face" id="face3">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+
+               <!-- ! dice four -->
+            <div class="face" id="face4">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+
+                 <!-- ! dice five-->
+             <div class="face" id="face5">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+
+
+
+             <!-- ! dice six -->
+             <div class="face" id="face6">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="warning">
+            <p></p>
+        </div>
+
+        <div class="form">
+            <div class="user-box">
+                <label for="bet"> bet Ammont : 
+                     <input class="bet-amoun" type="number" placeholder="bet ammount">
+                </label>
+
+              <label for="bet"> bet Number  :
+                <input class="bet-num" type="number" placeholder="bet number  1 - 6">
+                </label>
+            </div>
+
+        <button class="btn btn1">Play</button>
+        </div>
+    </div>
+    
+    <script type="module" src="main.js"></script>
+</body>
+</html>

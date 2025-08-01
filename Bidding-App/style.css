@@ -1,0 +1,375 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+PL:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+
+body{
+width: 100%;
+height: 100vh;
+background-color: #8a2be2;
+     font-family: 'Playwrite PL' , sans-serif;
+display: flex;
+justify-content: center;
+align-items: flex-start;
+color: white;
+
+
+}
+
+p{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+label{
+    font-weight: 600;
+}
+
+.container{
+    height: auto;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 10px;
+    margin-top: 100px;
+
+}
+
+h1{
+    text-decoration: underline;
+
+}
+
+.coins{
+    margin: 33px 0px 30px 70px;
+    width: 100%;
+
+}
+
+.dice{
+    margin: 20px 0px 20px 0px;
+   border: 5px solid white;
+   width: 130px;
+   height: 140px;
+   padding: 5px 10px;
+   border-radius: 20px;
+   box-sizing: border-box;
+}
+
+
+.dice .face{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.dice .face .dot{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+     position: absolute;
+}
+
+/*! dice  face 1 */
+
+.dice #face1 .dot{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*! dice  face 2 */
+
+.dice #face2 div:first-child{
+    top: 5px;
+    right: 0;
+
+
+}
+.dice #face2 div:last-child{
+    bottom: 5px;
+    left: 0;
+
+
+}
+
+/*! dice  face 3 */
+
+.dice #face3 div:first-child{
+top: 5px;
+}
+
+
+.dice #face3 div:first-child + div{
+   left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+   
+}
+
+.dice #face3 div:last-child{
+right: 0;
+bottom: 5px;
+}
+
+
+
+/*! dice of face 4 */
+
+.dice #face4 div:first-child{
+top: 0; 
+
+}
+
+.dice #face4 div:nth-child(2){
+top: 0; 
+right: 0;
+
+}
+
+
+.dice #face4 div:nth-child(3){
+bottom: 0; 
+left: 0;
+
+}
+
+.dice #face4 div:nth-child(4){
+bottom: 0; 
+right: 0;
+
+}
+
+
+/*! dice of face 5 */
+
+
+.dice #face5 div:first-child{
+top: 5px; 
+
+}
+
+.dice #face5 div:nth-child(2){
+top: 5px; 
+right: 0;
+
+}
+
+.dice #face5 div:nth-child(3){
+top: 50%; 
+left: 50%;
+transform: translate(-50%,-50%);
+
+}
+
+.dice #face5 div:nth-child(4){
+bottom: 5px; 
+left: 0;
+
+}
+
+.dice #face5 div:nth-child(5){
+bottom: 5px; 
+right: 0;
+
+}
+
+
+/*! dice of face 6 */
+
+
+.dice #face6 div:first-child{
+top: 10px; 
+
+}
+
+.dice #face6 div:nth-child(2){
+top: 50px; 
+
+
+}
+
+.dice #face6 div:nth-child(3){
+top: 90px; 
+
+
+}
+
+.dice #face6 div:nth-child(4){
+top: 10px; 
+right: 0;
+
+
+}
+
+.dice #face6 div:nth-child(5){
+top: 50px; 
+right: 0;
+
+
+}
+
+.dice #face6 div:nth-child(6){
+top: 90px; 
+right: 0;
+
+
+}
+
+/*! initally all dice faces */
+
+#face1,#face2,#face3 ,#face4,#face5,#face6{
+    display: none;
+}
+
+
+.warning{
+
+    width: 100%;
+    height: 30px;
+    margin-top: 25px;
+    display: none;
+    color: #ff0000;
+    font-family: 'Roboto' , sans-serif;
+
+}
+
+.message{
+      color: #ff0000;
+    font-family: 'Roboto' , sans-serif;
+    margin-top: 15px;
+}
+
+
+.form{
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction:column;
+    align-items: center;
+    
+}
+
+.btn{
+    margin-top:40px ;
+padding: 10px 20px;
+font-size: 20px;
+width: 100px;
+background-color: transparent;
+border: 2px solid white;
+outline: none;
+border-radius: 20px;
+color: white;
+   font-family: 'playwrite PL' , sans-serif;
+cursor: pointer;
+
+}
+
+.btn:hover{
+    background-color: white;
+    color: black;
+}
+
+.btn2{
+    margin-top: 20px;
+}
+
+.user-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+label{
+    display: flex;
+    align-items: center;
+
+}
+
+input{
+background-color: transparent;
+border: none;
+border: 2px solid white;
+border-radius: 20px;
+padding: 10px;
+    margin-left:5px;
+    color: white;
+       font-family: 'playwrite PL' , sans-serif;
+
+}
+input:focus{
+    outline: none;
+}
+
+input::placeholder{
+    color: white;
+    font-size: 14px;
+    font-family: 'playwrite PL' , sans-serif;
+}
+
+
+.animation-dice-roll{
+      animation: rotateDice 1s ease-in-out 1;
+}
+
+.hide{
+    display: none;
+}
+@keyframes rotateDice {
+  0%{
+    transform: rotate(0deg);
+    background-color: #a177c7;
+  }
+  50%{
+        transform: rotate(360deg);
+        background-color: #6926a7;
+  }
+
+  100%{
+      transform: rotate(0deg);
+        background-color: #3d096e;
+  
+  }
+ 
+}
+
+@media (max-width:760px) {
+    .container{
+            margin-top: 20px;
+    }
+
+    .coins{
+        margin-left: 0;
+        padding-left: 20px;
+        margin: 20px 0px;
+    }
+
+    .user-box{
+        flex-direction: column;
+        align-items: flex-start;
+       gap: 25px;
+    }
+
+ 
+
+    
+}
+
+@media (max-width:360px){
+      input{
+        padding: 6px;
+    }
+
+    input::placeholder{
+        padding-left: 4px;
+        font-size: 13 px;
+    }
+}

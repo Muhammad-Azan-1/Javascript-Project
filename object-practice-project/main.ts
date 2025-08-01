@@ -192,4 +192,4 @@ btn5?.addEventListener("click", (e) => {
  }
 
 
- console.log(employe_data)
+ console.log(employe_data , "data")
