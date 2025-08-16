@@ -36,7 +36,7 @@ function validateGuess(Guess:number) {
   if (Guess < 1) {
     resultBox?.classList.remove("hide");
     resultBox!.innerHTML = `<h2>Please Guess a number greater then 0</h2>`;
-  } else if (Guess > 20) {
+  } else if (Guess > 100) {
     resultBox?.classList.remove("hide");
     resultBox!.innerHTML = `<h2>Please Guess a number less then 20</h2>`;
   } else {
