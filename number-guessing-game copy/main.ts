@@ -53,7 +53,7 @@ function validateGuess(Guess:number) {
 
     } else {
       resultBox?.classList.remove("hide");
-      message = `<h2>Game over, You will never win Restart the game </h2>`
+      message = `<h3>Game over, You will never be able to win the random number was ${random}  </h3>`
       resultBox!.innerHTML = message;
       sessionStorage.setItem("message" ,  JSON.stringify(message))
       restartBtn.classList.remove("hide");
