@@ -34,9 +34,9 @@ function validateGuess(Guess) {
         resultBox === null || resultBox === void 0 ? void 0 : resultBox.classList.remove("hide");
         resultBox.innerHTML = `<h2>Please Guess a number greater then 0</h2>`;
     }
-    else if (Guess > 20) {
+    else if (Guess > 100) {
         resultBox === null || resultBox === void 0 ? void 0 : resultBox.classList.remove("hide");
-        resultBox.innerHTML = `<h2>Please Guess a number less then 20</h2>`;
+        resultBox.innerHTML = `<h2>Please Guess a number less then 100</h2>`;
     }
     else {
         if (noOfGuesses < 10) {
@@ -50,7 +50,7 @@ function validateGuess(Guess) {
         }
         else {
             resultBox === null || resultBox === void 0 ? void 0 : resultBox.classList.remove("hide");
-            message = `<h2>Game over, You will never win Restart the game </h2>`;
+            message = `<h3>Game over, You will never be able to win the random number was ${random}  </h3>`;
             resultBox.innerHTML = message;
             sessionStorage.setItem("message", JSON.stringify(message));
             restartBtn.classList.remove("hide");
