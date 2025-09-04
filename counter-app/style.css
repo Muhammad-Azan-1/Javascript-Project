@@ -128,7 +128,7 @@ animation: slide-bottom 1s 2s both , fade-out 1s 5s forwards;
 }
 
 .hide{
-    display: none;
+    visibility: hidden;
 }
 
 

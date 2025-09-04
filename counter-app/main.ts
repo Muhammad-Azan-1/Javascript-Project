@@ -26,10 +26,12 @@ welcomeDiv.addEventListener('animationend' , (e)=>{
 function increment(){
     if(count >= 0){
     count++
+    
     console.log("count increment" , count)
     result.innerText = `${count}`
     sessionStorage.setItem('count' , JSON.stringify(count))
     console.log("working Incr")
+    dcrBtn?.classList.remove('hide')
     }
         
 }
@@ -54,6 +56,7 @@ function reset(){
     result.innerText = `${count}`
     sessionStorage.setItem('count' , JSON.stringify(count))
     console.log("working reset")
+    dcrBtn?.classList.add('hide')
     }
     
 }

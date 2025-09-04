@@ -21,6 +21,7 @@ function increment() {
         result.innerText = `${count}`;
         sessionStorage.setItem('count', JSON.stringify(count));
         console.log("working Incr");
+        dcrBtn === null || dcrBtn === void 0 ? void 0 : dcrBtn.classList.remove('hide');
     }
 }
 function decrement() {
@@ -39,6 +40,7 @@ function reset() {
         result.innerText = `${count}`;
         sessionStorage.setItem('count', JSON.stringify(count));
         console.log("working reset");
+        dcrBtn === null || dcrBtn === void 0 ? void 0 : dcrBtn.classList.add('hide');
     }
 }
 incBtn === null || incBtn === void 0 ? void 0 : incBtn.addEventListener('click', increment);
