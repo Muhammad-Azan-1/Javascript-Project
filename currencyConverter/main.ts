@@ -245,8 +245,8 @@ function changeCurrency() {
     if(latestRate){
         let fromCurrency = (document.querySelector("#from") as HTMLSelectElement).value.toLocaleLowerCase();
         let toCurrency = (document.querySelector("#to") as HTMLSelectElement).value.toLocaleLowerCase();
-        let result  = +latestRate * +value
-        pTag.innerText = `${value} ${fromCurrency.toUpperCase()} = ${result} ${toCurrency.toUpperCase()}`;
+        let result  = (+latestRate * +value).toLocaleString()
+        pTag.innerText = `${Number(value).toLocaleString()} ${fromCurrency.toUpperCase()} = ${result} ${toCurrency.toUpperCase()}`;
         }
     
 }
