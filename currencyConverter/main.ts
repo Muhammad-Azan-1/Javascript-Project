@@ -207,10 +207,11 @@ function changeFlag(currOption: HTMLOptionElement) {
     let countryCode: string = countryList[currCurrency];
     const imgIndex =  currOption.className == 'from' ? 0 : 1
     flagImg[imgIndex]!.src = `https://flagsapi.com/${countryCode}/flat/64.png`;
-    currencyRates(currOption);
+    currencyRates();
+    
 }
 
-function currencyRates(currOpt: HTMLOptionElement) {
+function currencyRates() {
   let fromCurrency = (
     document.querySelector("#from") as HTMLSelectElement
   ).value.toLocaleLowerCase();
@@ -229,12 +230,15 @@ function currencyRates(currOpt: HTMLOptionElement) {
     .then((data) => {
       console.log("data", data);
       latestRate  = Number(data[fromCurrency][toCurrency]).toFixed(2);
+      console.log(latestRate , 'lastes')
       pTag.innerText = `1 ${fromCurrency.toUpperCase()} = ${latestRate} ${toCurrency.toUpperCase()}`;
     })
      .catch((error)=>{
         pTag.innerText  = 'Something went wrong while fetching the current curreny rates'
      })
 }
+
+   currencyRates();
 
 function changeCurrency() {
     let value = input.value

@@ -198,9 +198,9 @@ function changeFlag(currOption) {
     let countryCode = countryList[currCurrency];
     const imgIndex = currOption.className == 'from' ? 0 : 1;
     flagImg[imgIndex].src = `https://flagsapi.com/${countryCode}/flat/64.png`;
-    currencyRates(currOption);
+    currencyRates();
 }
-function currencyRates(currOpt) {
+function currencyRates() {
     let fromCurrency = document.querySelector("#from").value.toLocaleLowerCase();
     let toCurrency = document.querySelector("#to").value.toLocaleLowerCase();
     const url = fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${fromCurrency}.json`);
@@ -211,12 +211,14 @@ function currencyRates(currOpt) {
         .then((data) => {
         console.log("data", data);
         latestRate = Number(data[fromCurrency][toCurrency]).toFixed(2);
+        console.log(latestRate, 'lastes');
         pTag.innerText = `1 ${fromCurrency.toUpperCase()} = ${latestRate} ${toCurrency.toUpperCase()}`;
     })
         .catch((error) => {
         pTag.innerText = 'Something went wrong while fetching the current curreny rates';
     });
 }
+currencyRates();
 function changeCurrency() {
     let value = input.value;
     console.log(value);
@@ -227,8 +229,8 @@ function changeCurrency() {
     if (latestRate) {
         let fromCurrency = document.querySelector("#from").value.toLocaleLowerCase();
         let toCurrency = document.querySelector("#to").value.toLocaleLowerCase();
-        let result = +latestRate * +value;
-        pTag.innerText = `${value} ${fromCurrency.toUpperCase()} = ${result} ${toCurrency.toUpperCase()}`;
+        let result = (+latestRate * +value).toLocaleString();
+        pTag.innerText = `${Number(value).toLocaleString()} ${fromCurrency.toUpperCase()} = ${result} ${toCurrency.toUpperCase()}`;
     }
 }
 function showError(msg) {
