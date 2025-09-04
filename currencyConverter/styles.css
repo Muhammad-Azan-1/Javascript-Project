@@ -148,3 +148,32 @@ select{
 
 }
 
+
+
+
+@media (max-width:500px) {
+  main{
+    padding: 0px 20px;
+  }
+    .currency-exchange-box{
+      padding: 25px 15px;
+    }
+}
+
+
+
+@media (max-width:440px) {
+  h1{
+    font-size: 25px;
+  }
+  main{
+    padding: 0px 10px;
+  }
+    .currency-exchange-box{
+      padding: 25px 15px;
+    }
+
+    .inputbox2 {
+      flex-direction: column;
+    }
+}
