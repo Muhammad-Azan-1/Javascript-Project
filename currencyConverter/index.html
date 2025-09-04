@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <main>
+        <div class="currency-exchange-box">
+            <h1>Currency Exchange</h1>
+
+            <div class="inputbox1">
+                <label for="amount"> Enter Amount
+                    <input  type="number" id="amount">
+                </label>
+            </div>
+
+
+                <p class="errorMsg hide">Please enter a valid value</p>
+
+
+            <div class="inputbox2">
+                <label for="from">  From
+                         <i class="fa-solid fa-angle-down"></i>
+                    <select id="from" value="from-currency">
+                    </select>
+                       <img src="https://flagsapi.com/US/flat/64.png" alt="flag">
+                </label>
+
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+                <label for="to"> To
+                     <i class="fa-solid fa-angle-down"></i>
+                    <select id="to" value="to-currency">
+                    
+                    </select>
+                     <img src="https://flagsapi.com/PK/flat/64.png" alt="flag">
+                </label>
+            </div>
+
+            <div class="box3">
+                <p>1 USD = 283.71 PKR</p>
+            </div>
+
+            <button class="btn">
+                Get Exchange Rate
+            </button>
+
+
+        </div>
+    </main>
+    
+    <script type="module" src="main.js"></script>
+</body>
+</html>

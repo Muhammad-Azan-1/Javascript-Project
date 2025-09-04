@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- BMI = weight (kg) / [height (m)]²  -->
+
+    <main>
+        <h1>BMI Calculator</h1>
+
+
+        <form action="">
+
+        <div class="calculationBox">
+
+            <label for="weight">
+                <div class="input1">
+                    <p>Weight</p>
+                    <input type="number" class="input-weight" name=""  id="weight" required>
+                    <p>Kilograms</p>
+                </div>
+            </label>
+
+            <label for="height"></label>
+            <div class="input1">
+                <p>Height</p>
+                <input type="number" class="input-height" name="" id="height" required>
+                <p>Meter</p>
+            </div>
+            </label>
+
+            <div class="btn">
+                <button type="submit">Calculate</button>
+            </div>
+
+        </div>
+
+        <div class="result">
+            <div class="bmi">
+                    Your BMI :
+            </div>
+
+            <div class="resultbmi">
+                23.6
+            </div>
+        </div>
+
+        <div class="error hide">
+           
+        </div>
+
+        <div class="boxses">
+            <div class="box1">
+                <p>Under weight</p>
+                <p>< 18.5</p>
+            </div>
+            <div class="box1">
+                  <p>Normal weight</p>
+                <p> 18.5 - 25</p>
+            </div>
+            <div class="box1">
+                  <p>Over weight</p>
+                <p>25 - 30</p>
+            </div>
+            <div class="box1">
+                  <p>Obese</p>
+                <p> > 30</p>
+            </div>
+        </div>
+
+    </form>
+
+    </main>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
