@@ -323,6 +323,7 @@ input::placeholder{
 .hide{
     display: none;
 }
+
 @keyframes rotateDice {
   0%{
     transform: rotate(0deg);

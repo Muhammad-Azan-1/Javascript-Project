@@ -1,0 +1,183 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter' , sans-serif;
+}
+
+:root{
+    --bg-color : #464646;
+    --bg-card :#2D2727;
+    --border-card-click: #efc745;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg-color);
+
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
+
+h1{
+   font-size: 50px;
+   color: white;
+}
+
+
+.cards{
+    max-width: 100%;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(4,130px);
+    gap: 25px;
+    justify-items: center;
+
+
+
+
+
+}
+
+
+.card{
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 2px;
+    position: relative;
+        transform-style: preserve-3d;
+         transition: all .4s linear;
+         width: 130px;
+         height: 130px;
+
+
+
+        
+
+}
+
+
+.front-card , .back-card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--border-card-click);
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 10px;
+    top: 0;
+    left:0;
+    backface-visibility: hidden;
+
+}
+  
+
+.back-card{
+
+    transform: rotateY(180deg);
+    background-color: var(--bg-card);
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+
+
+
+.card-selected{
+     transform: rotateY(180deg);
+  
+}
+
+.card-match .front-card{
+  background-color: var(--bg-card);
+}
+
+
+.disable{
+    pointer-events: none;
+}
+
+button {
+    margin-top: 50px;
+    padding: 15px 15px;
+    border: 2px solid;
+    font-size: 22px;
+    background-color: transparent;
+    color: white;
+    font-family: 500;
+    border-radius: 10px;
+    transition: background-color 0.5s ;
+
+
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: white;
+
+   color: #efc745;
+}
+
+span{
+color: var(--border-card-click);
+}
+
+
+@media (max-width:700px) {
+    main{
+        height: auto;
+    }
+    .cards{
+        grid-template-columns: repeat(auto-fit , minmax(130px , 150px));
+        gap: 20px;
+    }
+
+    h1{
+        margin-top: 20px;
+        font-size: 30px;
+    }
+}
+
+
+/* 
+Step by step kya ho raha hai:
+
+Initial state
+
+Card ke andar do div hote hain:
+
+.front-card (jo hamesha front dikhata hai).
+
+.back-card (jo pehle se rotateY(180deg) hota hai is liye peechay chhup jata hai).
+
+Dono pe backface-visibility: hidden; laga hota hai, matlab jo side backside hogi wo transparent ho jati hai.
+
+Click hone se kya hota hai?
+
+Jab tum card pe click karte ho → .card-selected class add hoti hai.
+
+.card-selected { transform: rotateY(180deg); } ki wajah se pura card 180 degree ghoom jata hai.
+
+Flip effect kaise ban raha hai?
+
+Jab card ghooma → jo pehle back side (jo rotateY(180deg) thi) wo ab saamne aa gayi.
+
+Front wali side backside chali gayi, aur kyunki uska backface-visibility: hidden; hai, wo ab dikhai nahi deti.
+
+Result: tumhe lagta hai card “flip” hua hai. */
